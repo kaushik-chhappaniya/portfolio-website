@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/portfolio-website/static/css/main.55c49f05.css",
-    "main.js": "/portfolio-website/static/js/main.022f2744.js",
-    "static/media/Kaushik.Chhappaniya.jpeg": "/portfolio-website/static/media/Kaushik.Chhappaniya.3f21934cab8c197dd065.jpeg",
+    "main.js": "/portfolio-website/static/js/main.424da6cc.js",
+    "static/media/Kaushik.Chhappaniya.jpg": "/portfolio-website/static/media/Kaushik.Chhappaniya.75ff783fe06a34f31330.jpg",
     "index.html": "/portfolio-website/index.html",
     "main.55c49f05.css.map": "/portfolio-website/static/css/main.55c49f05.css.map",
-    "main.022f2744.js.map": "/portfolio-website/static/js/main.022f2744.js.map"
+    "main.424da6cc.js.map": "/portfolio-website/static/js/main.424da6cc.js.map"
   },
   "entrypoints": [
     "static/css/main.55c49f05.css",
-    "static/js/main.022f2744.js"
+    "static/js/main.424da6cc.js"
   ]
 }
