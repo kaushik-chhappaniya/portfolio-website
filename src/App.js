@@ -1,7 +1,7 @@
 import styled, { ThemeProvider } from "styled-components";
 import { darkTheme } from "./utils/Themes";
 import Navbar from "./components/NavBar";
-import { BrowserRouter, Router } from "react-router-dom";
+import { BrowserRouter, Router, Route, Routes } from "react-router-dom";
 import Hero from "./components/Sections/Hero";
 import Skills from "./components/Sections/Skills";
 import Experience from "./components/Sections/Experience";
@@ -33,26 +33,38 @@ function App() {
     <ThemeProvider theme={darkTheme}>
       <BrowserRouter>
         <Navbar />
-        <Body>
+         <Body>
           <StartCanvas />
-          <div>
-            <Hero />
-            <Wrapper>
-              <Skills />
-              <Experience />
-            </Wrapper>
-            <Projects />
-            <Wrapper>
-              <Education />
-              <Contact />
-            </Wrapper>
-            <Footer />
-          </div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/projects" element={<Projects/>} />
+            <Route path="/education" element={<Education/>} />
+          </Routes>
+        <Footer/>
         </Body>
       </BrowserRouter>
     </ThemeProvider>
   );
 }
 
+function Home() {
+  return (
+          <div>
+            <Hero />
+            <Wrapper>
+              <Skills />
+              <Contact />
+            </Wrapper>
+            {/* <Projects />
+            <Wrapper>
+              <Education />
+              <Contact />
+            </Wrapper>
+            <Footer /> */}
+          </div>
+);
+}
 
 export default App;

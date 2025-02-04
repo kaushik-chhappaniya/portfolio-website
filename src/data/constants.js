@@ -10,11 +10,11 @@ export const Bio = {
     "Dynamic Full-Stack Developer with 2.5+ years of experience specializing in (Python, MERN). Proficient in CI/CD automation. Aspiring to excel in Node.js Full-stack development roles",
   github: "https://github.com/kaushik-chhappaniya/",
   resume:
-    "https://drive.google.com/file/d/1txFKZD3LNIXMc329jD9c995AU8LItOXK/view?usp=drive_link",
+    "https://drive.google.com/file/d/1lsUX41JlWYQpXX_w9h71Ik1evSlWWpzq/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/kaushik-chhappaniya-80334719b/",
-  twitter: "https://twitter.com/RishavChanda",
-  insta: "https://www.instagram.com/rishav_chanda/",
-  facebook: "https://www.facebook.com/rishav.chanda.165/",
+  // twitter: "https://twitter.com/RishavChanda",
+  insta: "https://www.instagram.com/kaushik__kc/",
+  // facebook: "https://www.facebook.com/rishav.chanda.165/",
 };
 
 export const skills = [
@@ -582,3 +582,5 @@ export const TimeLineData = [
   { year: 2020, text: "Shared my projects with the world" },
   { year: 2021, text: "Started my own platform" },
 ];
+
+export const volunteering = []
