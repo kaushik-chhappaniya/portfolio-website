@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Bio } from "../../data/constants";
+import { Link } from "react-router-dom";
 import {
   FacebookRounded,
   Instagram,
@@ -84,21 +85,22 @@ const Footer = () => {
   return (
     <FooterContainer>
       <FooterWrapper>
-        <Logo>Rishav Chanda</Logo>
+        <Logo>Kaushik Chhappaniya</Logo>
         <Nav>
-          <NavLink href="#About">About</NavLink>
-          <NavLink href="#Skills">Skills</NavLink>
-          <NavLink href="#Experience">Experience</NavLink>
-          <NavLink href="#Projects">Projects</NavLink>
-          <NavLink href="#Education">Education</NavLink>
+          <Link to="/">  <NavLink> About </NavLink></Link>
+                   <Link to="/Skills"><NavLink> Skills </NavLink> </Link>
+                   <Link to="/Experience"><NavLink> Experience </NavLink></Link>
+                 <Link to="/Projects"> <NavLink> Projects </NavLink></Link>
+                   <Link to="/Education"><NavLink > Education </NavLink></Link>
+                   <Link  to="/Volunteering"><NavLink> Volunteering </NavLink></Link>
         </Nav>
         <SocialMediaIcons>
-          <SocialMediaIcon href={Bio.facebook} target="display">
+          {/* <SocialMediaIcon href={Bio.facebook} target="display">
             <FacebookRounded />
           </SocialMediaIcon>
           <SocialMediaIcon href={Bio.twitter} target="display">
             <Twitter />
-          </SocialMediaIcon>
+          </SocialMediaIcon> */}
           <SocialMediaIcon href={Bio.linkedin} target="display">
             <LinkedIn />
           </SocialMediaIcon>
