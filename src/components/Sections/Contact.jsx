@@ -45,7 +45,7 @@ const Desc = styled.div`
   }
 `;
 
-const ContactForm = styled.div`
+const ContactForm = styled.form`
   width: 95%;
   max-width: 600px;
   display: flex;
@@ -99,6 +99,7 @@ const ContactButton = styled.input`
   margin-top: 2px;
   border-radius: 12px;
   border: none;
+  cursor: pointer;
   color: ${({ theme }) => theme.text_primary};
   font-size: 18px;
   font-weight: 600;
@@ -106,11 +107,11 @@ const ContactButton = styled.input`
 
 const Contact = () => {
   const form = useRef();
-  const handelSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_eduz9xf",
+        "service_phd7ude",
         "template_l4nehb9",
         form.current,
         "oc8r0vXgoJOIZMRko"
@@ -136,7 +137,7 @@ const Contact = () => {
         >
           Feel free to reach out to me for any questions or opportunities!
         </Desc>
-        <ContactForm onSubmit={handelSubmit}>
+        <ContactForm onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
           <ContactInput placeholder="Your Email" name="from_email" />
           <ContactInput placeholder="Your Name" name="from_name" />
