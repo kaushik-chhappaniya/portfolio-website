@@ -87,20 +87,20 @@ const Footer = () => {
       <FooterWrapper>
         <Logo>Kaushik Chhappaniya</Logo>
         <Nav>
-          <NavLink ><Link to="/"> About </Link></NavLink>
-          <NavLink ><Link to="/Skills"> Skills </Link></NavLink>
-          <NavLink ><Link to="/Experience"> Experience </Link></NavLink>
-          <NavLink ><Link to="/Projects"> Projects </Link></NavLink>
-          <NavLink ><Link to="/Education"> Education </Link></NavLink>
-          <NavLink ><Link to="/Volunterring"> Volunteering </Link></NavLink>
+          <Link to="/">  <NavLink> About </NavLink></Link>
+                   <Link to="/Skills"><NavLink> Skills </NavLink> </Link>
+                   <Link to="/Experience"><NavLink> Experience </NavLink></Link>
+                 <Link to="/Projects"> <NavLink> Projects </NavLink></Link>
+                   <Link to="/Education"><NavLink > Education </NavLink></Link>
+                   <Link  to="/Volunteering"><NavLink> Volunteering </NavLink></Link>
         </Nav>
         <SocialMediaIcons>
-          <SocialMediaIcon href={Bio.facebook} target="display">
+          {/* <SocialMediaIcon href={Bio.facebook} target="display">
             <FacebookRounded />
           </SocialMediaIcon>
           <SocialMediaIcon href={Bio.twitter} target="display">
             <Twitter />
-          </SocialMediaIcon>
+          </SocialMediaIcon> */}
           <SocialMediaIcon href={Bio.linkedin} target="display">
             <LinkedIn />
           </SocialMediaIcon>

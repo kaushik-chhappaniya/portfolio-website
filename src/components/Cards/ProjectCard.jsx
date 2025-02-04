@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Card = styled.div`
   width: 330px;
-  height: 400px;
+  height: 450px;
   background-color: ${({ theme }) => theme.card};
   cursor: pointer;
   border-radius: 10px;
@@ -30,6 +30,7 @@ const Card = styled.div`
 const Tags = styled.div`
   width: 100%;
   color: red;
+  justify-content:center;
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -37,27 +38,49 @@ const Tags = styled.div`
 `;
 
 const Tag = styled.div`
-  font-size: 15px;
-  color: red;
+  font-size: 16px;
   font-weight: 400;
-  @media only screen and (max-width: 768px) {
-    font-size: 12px;
+  color: ${({ theme }) => theme.text_primary + 80};
+  border: 1px solid ${({ theme }) => theme.text_primary + 80};
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding: 8px 12px;
   }
+  @media (max-width: 500px) {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
 `;
 
 const ItemWrapper = styled.div`
-  position:relative;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  color: red;
-  gap: 8px;
-  margin-top: 8px;
-  max-width: 100%;
-  position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    gap: 6px;
+    justify-content: center;
+    position: relative;
 `;
+// flex-direction: column;
+// position:relative;
+// display: flex;
+// flex-wrap: wrap;
+// color: red;
+// gap: 8px;
+// margin-top: 8px;
+// max-width: 100%;
+// position: relative;
 
 const Details = styled.div`
+  height: 100%;
   position:relative;
   width: 100%;
   display: flex;
@@ -129,15 +152,13 @@ const ProjectCard = ({ project }) => {
         <Description>{project.description}</Description>
            </Details>
       <ItemWrapper>
-        <b>Skills</b>
+        <b style={{color:"red", fontSize:"20px"}}> Skills</b>
         <Tags>
           {project?.tags?.map((tag, index) => (
-             <Tag key={index}>• {tag}</Tag>
+             <Tag key={index}>{tag}</Tag>
             ))}
         </Tags>
-      </ItemWrapper>
 
-      <ItemWrapper>
         {project?.github && (
            <Button href={project?.github} target="_blank">
             View Code

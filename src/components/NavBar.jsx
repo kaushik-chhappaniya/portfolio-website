@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link as LinkR } from "react-router-dom";
+import { Link, Link as LinkR } from "react-router-dom";
 import styled, { useTheme } from "styled-components";
 import { Bio } from "../data/constants";
 import { MenuRounded } from "@mui/icons-material";
@@ -137,31 +137,34 @@ const Navbar = () => {
         <MobileIcon onClick={() => setIsOpen(!isOpen)}>
           <MenuRounded style={{ color: "inherit" }} />
         </MobileIcon>
-
-        <NavItems>
-          <NavLink href="#About">About</NavLink>
-          <NavLink href="#Skills">Skills</NavLink>
-          <NavLink href="#Experience">Experience</NavLink>
-          <NavLink href="#Projects">Projects</NavLink>
-          <NavLink href="#Education">Education</NavLink>
-        </NavItems>
+ <NavItems>
+         <Link to="/">  <NavLink> About </NavLink></Link>
+          <Link to="/Skills"><NavLink> Skills </NavLink> </Link>
+          <Link to="/Experience"><NavLink> Experience </NavLink></Link>
+        <Link to="/Projects"> <NavLink> Projects </NavLink></Link>
+          <Link to="/Education"><NavLink > Education </NavLink></Link>
+          <Link  to="/Volunteering"><NavLink> Volunteering </NavLink></Link>
+    </NavItems>
 
         {isOpen && (
           <MobileMenu isOpen={isOpen}>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#About">
-              About
+            <NavLink onClick={() => setIsOpen(!isOpen)} >
+              <Link to="/"> About </Link>
             </NavLink>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Skills">
-              Skills
+            <NavLink onClick={() => setIsOpen(!isOpen)}>
+              <Link to="/Skills"> Skills </Link>
             </NavLink>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Experience">
-              Experience
+            <NavLink onClick={() => setIsOpen(!isOpen)} >
+              <Link to="/Experience"> Experience </Link>
             </NavLink>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Projects">
-              Projects
+            <NavLink onClick={() => setIsOpen(!isOpen)} >
+              <Link to="/Projects"> Projects </Link>
             </NavLink>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Education">
-              Education
+            <NavLink onClick={() => setIsOpen(!isOpen)} >
+              <Link to="/Education"> Education </Link>
+            </NavLink>
+            <NavLink onClick={() => setIsOpen(!isOpen)} >
+              <Link to="/Volunteering"> Volunteering </Link>
             </NavLink>
             <GithubButton
               href={Bio.github}

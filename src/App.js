@@ -10,6 +10,7 @@ import Projects from "./components/Sections/Projects";
 import StartCanvas from "./components/canvas/Stars";
 import Contact from "./components/Sections/Contact";
 import Footer from "./components/Sections/Footer";
+import Volunteering from "./components/Sections/Volunteering";
 
 const Body = styled.div`
    background-color: ${({ theme }) => theme.bg};
@@ -37,10 +38,12 @@ function App() {
           <StartCanvas />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/experience" element={<Experience />} />
-            <Route path="/projects" element={<Projects/>} />
-            <Route path="/education" element={<Education/>} />
+            <Route path="/portfolio-website" element={<Home />} />
+            <Route path="/Skills" element={<Skills />} />
+            <Route path="/Experience" element={<Experience />} />
+            <Route path="/Projects" element={<Projects/>} />
+            <Route path="/Education" element={<Education/>} />
+            <Route path="/Volunteering" element={<Volunteering/>} />
           </Routes>
         <Footer/>
         </Body>
